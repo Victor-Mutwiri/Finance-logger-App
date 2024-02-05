@@ -1,5 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const me = {
+    name: "Victor",
+    age: 24,
+    speak(text) { console.log(text); },
+    spend(amount) {
+        console.log('I spent', amount);
+        return amount;
+    }
+};
 const invoice_js_1 = require("./classes/invoice.js");
 const invOne = new invoice_js_1.Invoice('mario', 'work on the mario website', 2500);
 const invTwo = new invoice_js_1.Invoice('Tito', 'work on the Tito website', 1500);
