@@ -1,20 +1,14 @@
 "use strict";
-class Invoice {
-    constructor(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
-    }
-    format() {
-        return `${this.client} owes $${this.amount} for ${this.details}`;
-    }
-}
-const invOne = new Invoice('mario', 'work on the mario website', 2500);
-const invTwo = new Invoice('Tito', 'work on the Tito website', 1500);
+Object.defineProperty(exports, "__esModule", { value: true });
+const invoice_js_1 = require("./classes/invoice.js");
+const invOne = new invoice_js_1.Invoice('mario', 'work on the mario website', 2500);
+const invTwo = new invoice_js_1.Invoice('Tito', 'work on the Tito website', 1500);
 let invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-console.log(invoices);
+invoices.forEach(inv => {
+    console.log(inv.client, inv.amount, inv.format());
+});
 const form = document.querySelector('.new-item-form');
 const type = document.querySelector('#type');
 const tofrom = document.querySelector('#tofrom');
